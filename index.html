@@ -1,10 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Rock Paper Scissors</title>
-		<script defer src="script.js"></script>
+
+		<meta
+			name="description"
+			content="A simple rock paper scissors game built with HTML, CSS, and JavaScript">
+		<meta
+			name="keywords"
+			content="Odin project, rock paper scissors, HTML, CSS, JavaScript">
+		<meta name="author" content="Azam Azis">
+
+		<meta property="og:title" content="Rock Paper Scissors">
+		<meta property="og:type" content="website">
+		<meta
+			property="og:description"
+			content="A simple rock paper scissors game built with HTML, CSS, and JavaScript">
+		<meta property="og:image" content="image-url.jpg">
+		<meta property="og:url" content="url-of-the-page">
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@willastro112">
+		<meta name="twitter:title" content="Rock Paper Scissors">
+		<meta
+			name="twitter:description"
+			content="A simple rock paper scissors game built with HTML, CSS, and JavaScript">
+		<meta name="twitter:image" content="Image.img">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+Cham:wght@100..900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="wrapper">
+			<h1 class="title">Rock Paper Scissors</h1>
+
+			<div class="score-board">
+				<div class="player">
+					<h2 class="player__character">YOU</h2>
+					<p class="player__score" id="player-score">0</p>
+				</div>
+
+				<div class="dash">&#8212;</div>
+
+				<div class="player">
+					<h2 class="player__character">COMPUTER</h2>
+					<p class="player__score" id="computer-score">0</p>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<button
+					class="btn rock btn-choice btn--hover btn--active"
+					type="button"
+					data-selection="rock">
+					<img src="img/rock.png" alt="rock" height="50" width="50">
+				</button>
+				<button
+					class="btn paper btn-choice btn--hover btn--active"
+					type="button"
+					data-selection="paper">
+					<img src="img/paper.png" alt="paper" height="50" width="50">
+				</button>
+				<button
+					class="btn scissors btn-choice btn--hover btn--active"
+					type="button"
+					data-selection="scissors">
+					<img src="img/scissors.png" alt="scissors" height="50" width="50">
+				</button>
+			</div>
+
+			<div class="stage">
+				<div class="battle">
+					<div class="battle__choice">
+						<div class="choices choices--player" id="player__choice"></div>
+						<p class="battle__player" id="battle__player">YOU</p>
+					</div>
+
+					<p class="battle__versus">vs</p>
+
+					<div class="battle__choice">
+						<div class="choices choices--computer" id="computer__choice"></div>
+						<p class="battle__player" id="battle__computer">COMPUTER</p>
+					</div>
+				</div>
+
+				<p class="result">The winner is your computer</p>
+			</div>
+
+			<button class="btn reset btn--hover btn--active" type="button">
+				Reset
+			</button>
+		</div>
+	</body>
 </html>
