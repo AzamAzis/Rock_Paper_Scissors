@@ -18,7 +18,9 @@ body {
 body {
 	align-items: center;
 	background: #171835;
-	background: linear-gradient(157deg, #171835 10%, #561787 50%, #171835 90%);
+	background:
+		linear-gradient(157deg, #171835 10%, #561787 50%, #171835 90%) no-repeat
+		center / cover;
 	display: flex;
 	font-family: "Noto Sans Cham", sans-serif;
 	justify-content: center;
