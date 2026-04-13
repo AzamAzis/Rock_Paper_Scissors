@@ -46,35 +46,17 @@ function playGame() {
 						"url('img/rock.png') no-repeat center / cover";
 					playerChoiceRps.classList.add("choices-bigSmall");
 
-					for (const playerChoice of playerChoices) {
-						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
-							playerChoice.classList.remove("choices-bigSmall");
-						}
-					}
-
 					break;
 				case "paper":
 					playerChoiceRps.style.background =
 						"url('img/paper.png') no-repeat center / cover";
 					playerChoiceRps.classList.add("choices-bigSmall");
 
-					for (const playerChoice of playerChoices) {
-						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
-							playerChoice.classList.remove("choices-bigSmall");
-						}
-					}
-
 					break;
 				case "scissors":
 					playerChoiceRps.style.background =
 						"url('img/scissors.png') no-repeat center / cover";
 					playerChoiceRps.classList.add("choices-bigSmall");
-
-					for (const playerChoice of playerChoices) {
-						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
-							playerChoice.classList.remove("choices-bigSmall");
-						}
-					}
 
 					break;
 			}
@@ -85,35 +67,17 @@ function playGame() {
 						"url('img/rock.png') no-repeat center / cover";
 					computerChoiceRps.classList.add("choices-bigSmall");
 
-					for (const playerChoice of playerChoices) {
-						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
-							playerChoice.classList.remove("choices-bigSmall");
-						}
-					}
-
 					break;
 				case "paper":
 					computerChoiceRps.style.background =
 						"url('img/paper.png') no-repeat center / cover";
 					computerChoiceRps.classList.add("choices-bigSmall");
 
-					for (const playerChoice of playerChoices) {
-						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
-							playerChoice.classList.remove("choices-bigSmall");
-						}
-					}
-
 					break;
 				case "scissors":
 					computerChoiceRps.style.background =
 						"url('img/scissors.png') no-repeat center / cover";
 					computerChoiceRps.classList.add("choices-bigSmall");
-
-					for (const playerChoice of playerChoices) {
-						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
-							playerChoice.classList.remove("choices-bigSmall");
-						}
-					}
 
 					break;
 			}

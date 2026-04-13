@@ -136,26 +136,7 @@ img {
 
 .choices {
 	height: 50px;
-	/* transition: all ease 400ms; */
 	width: 50px;
-}
-
-.choices-bigSmall {
-	animation: bigSmall ease 400ms;
-}
-
-@keyframes bigSmall {
-	0% {
-		scale: 1;
-	}
-
-	50% {
-		scale: 2;
-	}
-
-	100% {
-		scale: 1;
-	}
 }
 
 .result {
@@ -189,6 +170,24 @@ img {
 }
 
 /* ||EFFECTS */
+
+.choices-bigSmall {
+	animation: bigSmall ease 500ms;
+}
+
+@keyframes bigSmall {
+	0% {
+		scale: 1;
+	}
+
+	50% {
+		scale: 2;
+	}
+
+	100% {
+		scale: 1;
+	}
+}
 
 .stage-fadeIn {
 	opacity: 1;
