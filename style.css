@@ -99,6 +99,11 @@ img {
 	transition: all linear 225ms;
 }
 
+.btn:focus-visible {
+	outline: 2px dashed whitesmoke;
+	outline-offset: 3px;
+}
+
 @media (hover: hover) {
 	.btn--hover:hover {
 		background-color: #744799;
@@ -205,12 +210,10 @@ img {
 	}
 
 	50% {
-		opacity: 0;
 		transform: translateY(-25px);
 	}
 
 	100% {
-		opacity: 0;
 		transform: translateY(200px);
 	}
 }
