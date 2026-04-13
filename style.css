@@ -136,16 +136,34 @@ img {
 
 .choices {
 	height: 50px;
-	transition: all ease 400ms;
+	/* transition: all ease 400ms; */
 	width: 50px;
 }
 
+.choices-bigSmall {
+	animation: bigSmall ease 400ms;
+}
+
+@keyframes bigSmall {
+	0% {
+		scale: 1;
+	}
+
+	50% {
+		scale: 2;
+	}
+
+	100% {
+		scale: 1;
+	}
+}
+
 .result {
+	align-items: center;
 	color: #80ff72;
-	font-size: 1.25rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	font-size: 1.25rem;
 	font-weight: 600;
 	inset: 0;
 	opacity: 0;
@@ -156,11 +174,11 @@ img {
 }
 
 .result::before {
-	content: "";
 	background: url("img/party-popper.png") no-repeat center / cover;
+	content: "";
 	display: grid;
-	width: 2.5rem;
 	height: 2.5rem;
+	width: 2.5rem;
 }
 
 /* **RESET BUTTON */
@@ -178,7 +196,24 @@ img {
 }
 
 .battle-initial {
+	-webkit-animation: goUpDown ease 600ms both;
 	animation: goUpDown ease 600ms both;
+}
+
+@-webkit-keyframes goUpDown {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(200px);
+	}
 }
 
 @keyframes goUpDown {
@@ -198,7 +233,24 @@ img {
 }
 
 .battle-initial-one {
+	-webkit-animation: goDownUp ease 600ms both;
 	animation: goDownUp ease 600ms both;
+}
+
+@-webkit-keyframes goDownUp {
+	0% {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes goDownUp {
@@ -217,6 +269,7 @@ img {
 	}
 }
 .battle-fadeOut {
+	-webkit-animation: goUpDown ease 500ms both;
 	animation: goUpDown ease 500ms both;
 }
 
@@ -237,7 +290,22 @@ img {
 }
 
 .number-effect {
+	-webkit-animation: score ease-in-out 600ms;
 	animation: score ease-in-out 600ms;
+}
+
+@-webkit-keyframes score {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 @keyframes score {

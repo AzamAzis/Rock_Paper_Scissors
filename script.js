@@ -3,6 +3,7 @@ const playerChoiceRps = document.querySelector("#player__choice");
 const computerChoiceRps = document.querySelector("#computer__choice");
 const stage = document.querySelector(".stage");
 const battle = document.querySelector(".battle");
+const playerChoices = document.querySelectorAll(".choices");
 
 const btns = document.querySelectorAll(".btn-choice");
 
@@ -43,14 +44,38 @@ function playGame() {
 				case "rock":
 					playerChoiceRps.style.background =
 						"url('img/rock.png') no-repeat center / cover";
+					playerChoiceRps.classList.add("choices-bigSmall");
+
+					for (const playerChoice of playerChoices) {
+						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
+							playerChoice.classList.remove("choices-bigSmall");
+						}
+					}
+
 					break;
 				case "paper":
 					playerChoiceRps.style.background =
 						"url('img/paper.png') no-repeat center / cover";
+					playerChoiceRps.classList.add("choices-bigSmall");
+
+					for (const playerChoice of playerChoices) {
+						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
+							playerChoice.classList.remove("choices-bigSmall");
+						}
+					}
+
 					break;
 				case "scissors":
 					playerChoiceRps.style.background =
 						"url('img/scissors.png') no-repeat center / cover";
+					playerChoiceRps.classList.add("choices-bigSmall");
+
+					for (const playerChoice of playerChoices) {
+						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
+							playerChoice.classList.remove("choices-bigSmall");
+						}
+					}
+
 					break;
 			}
 
@@ -58,14 +83,38 @@ function playGame() {
 				case "rock":
 					computerChoiceRps.style.background =
 						"url('img/rock.png') no-repeat center / cover";
+					computerChoiceRps.classList.add("choices-bigSmall");
+
+					for (const playerChoice of playerChoices) {
+						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
+							playerChoice.classList.remove("choices-bigSmall");
+						}
+					}
+
 					break;
 				case "paper":
 					computerChoiceRps.style.background =
 						"url('img/paper.png') no-repeat center / cover";
+					computerChoiceRps.classList.add("choices-bigSmall");
+
+					for (const playerChoice of playerChoices) {
+						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
+							playerChoice.classList.remove("choices-bigSmall");
+						}
+					}
+
 					break;
 				case "scissors":
 					computerChoiceRps.style.background =
 						"url('img/scissors.png') no-repeat center / cover";
+					computerChoiceRps.classList.add("choices-bigSmall");
+
+					for (const playerChoice of playerChoices) {
+						if (humanScore + 1 === 5 || computerScore + 1 === 5) {
+							playerChoice.classList.remove("choices-bigSmall");
+						}
+					}
+
 					break;
 			}
 
@@ -139,8 +188,14 @@ function playGame() {
 	}
 
 	for (const score of scores) {
-		score.addEventListener("animationend", () => {
-			score.classList.remove("number-effect");
+		score.addEventListener("animationend", (event) => {
+			event.target.classList.remove("number-effect");
+		});
+	}
+
+	for (const playerChoice of playerChoices) {
+		playerChoice.addEventListener("animationend", (event) => {
+			event.target.classList.remove("choices-bigSmall");
 		});
 	}
 }
